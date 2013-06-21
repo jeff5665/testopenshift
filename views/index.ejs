@@ -1,0 +1,133 @@
+<div id="container" class="container">
+    <div class="content">
+        <table id="contentTb" class="table">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>环境</th>
+                <th>操作 </th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr data-modelForId="contentTb" class="jModelInst"><td>@1</td><td><input type="button" value="@2"></td></tr>
+
+            </tbody>
+            <tfoot>
+            <tr>
+                <td>-</td>
+                <td>-</td>
+                <td><a href="#myModal" role="button" class="btn" data-toggle="modal">新增</a></td>
+            </tr>
+            </tfoot>
+        </table>
+    </div>
+    <!--S modal-->
+    <div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"  style="display: none">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="myModalLabel">新增环境</h3>
+        </div>
+        <div class="modal-body">
+            <form id="settingForm" class="form-horizontal">
+                <div class="accordion" id="accordion2">
+                    <div class="accordion-group">
+                        <div class="accordion-heading">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseZero">
+                                变量名称设置
+                            </a>
+                        </div>
+                        <div class="accordion-body collapse in">
+                            <div class="accordion-inner">
+                                <div class="control-group">
+                                    <label class="control-label" for="eName">环境名称</label>
+                                    <div class="controls">
+                                        <input type="text" id="eName" placeholder="环境名称">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-group">
+                        <div class="accordion-heading">
+                            <a class="accordion-toggle ft-l" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+                                JS设置
+                            </a>
+
+                        </div>
+                        <div  class="accordion-body collapse in">
+                            <div class="accordion-inner">
+                                <div class="group-container">
+                                    <div class="control-group">
+                                        <label class="control-label" for="jsName" >名称</label>
+                                        <div class="controls">
+                                            <input type="text" id="jsName" placeholder="名称">
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label" for="jsSrc">源路径</label>
+                                        <div class="controls">
+                                            <input type="text" id="jsSrc" placeholder="源路径">
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label" for="jsTargetSrc">压缩后的路径</label>
+                                        <div class="controls">
+                                            <input type="text" id="jsTargetSrc" placeholder="压缩后的路径">
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="btn btn-success J-addJs">新增</span>
+                                <span class="btn btn-danger J-delJs">删除</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-group">
+                        <div class="accordion-heading">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+                               CSS设置
+                            </a>
+                        </div>
+                        <div class="accordion-body collapse in">
+                            <div class="accordion-inner">
+                                <div class="group-container">
+                                    <div class="control-group">
+                                        <label class="control-label" for="cssName">名称</label>
+                                        <div class="controls">
+                                            <input type="text" id="cssName" placeholder="名称">
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label" for="cssSrc">源路径</label>
+                                        <div class="controls">
+                                            <input type="text" id="cssSrc" placeholder="源路径">
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label" for="cssTargetSrc">压缩后的路径</label>
+                                        <div class="controls">
+                                            <input type="text" id="cssTargetSrc" placeholder="压缩后的路径">
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label" for="bgRelpaceUrl">css背景图片替换地址</label>
+                                        <div class="controls">
+                                            <input type="text" id="bgRelpaceUrl" placeholder="css背景图片替换地址">
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="btn btn-success J-addCss">新增</span>
+                                <span class="btn btn-danger J-delCss">删除</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
+            <button id="save" class="btn btn-primary">保存</button>
+        </div>
+    </div>
+    <!--E modal-->
+
+</div>
